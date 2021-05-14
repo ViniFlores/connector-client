@@ -36,7 +36,7 @@ export default {
     fetchList () {
       this.$axios
         .$get(
-          '/api/list'
+          'http://68.183.126.30/list'
         )
         .then((r) => {
           this.data = r.reverse()

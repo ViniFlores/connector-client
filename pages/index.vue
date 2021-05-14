@@ -44,7 +44,7 @@ export default {
     fetchJobs () {
       this.$axios
         .$get(
-          `/api/search?description=${this.selectedDescription}&location=${this.selectedLocation}`
+          `http://68.183.126.30/search?description=${this.selectedDescription}&location=${this.selectedLocation}`
         )
         .then((r) => {
           this.jobs = r
