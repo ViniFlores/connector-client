@@ -14,6 +14,14 @@
       </button>
     </div>
 
+    <div v-if="initialState" class="text-2xl mt-5 text-center">
+      Find now your dream job !
+    </div>
+
+    <div v-else-if="!jobs.length" class="text-2xl mt-5 text-center">
+      Still no opportunities there :(<br>
+    </div>
+
     <div class="flex flex-col mt-5" style="max-width: 80vw;">
       <card v-for="job in jobs" :key="job.id" class="mb-4" :logo="job.company_logo" v-bind="job" />
     </div>
@@ -30,19 +38,25 @@ export default {
     Autocomplete,
     Card
   },
-  title: 'Connector - Find your IT job and connect yourself',
 
   data: () => ({
     selectedDescription: null,
     selectedLocation: null,
     jobs: [],
 
+    initialState: true,
+
     locations,
     descriptions
   }),
 
+  head: () => ({
+    title: 'Connector - Find your IT job and connect yourself'
+  }),
+
   methods: {
     fetchJobs () {
+      this.initialState = false
       this.$axios
         .$get(
           `https://clubedojournal.com.br/search?description=${this.selectedDescription}&location=${this.selectedLocation}`

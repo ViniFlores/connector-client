@@ -28,7 +28,9 @@ export default {
     data: []
   }),
 
-  title: 'Admin data - Connector',
+  head: () => ({
+    title: 'Admin data - Connector'
+  }),
 
   created () {
     this.fetchList()
