@@ -56,13 +56,15 @@ export default {
 
   methods: {
     fetchJobs () {
-      this.initialState = false
       this.$axios
         .$get(
           `https://clubedojournal.com.br/search?description=${this.selectedDescription}&location=${this.selectedLocation}`
         )
         .then((r) => {
           this.jobs = r
+          this.initialState = false
+        }).catch(() => {
+          this.initialState = false
         })
     }
   }
