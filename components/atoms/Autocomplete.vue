@@ -7,6 +7,7 @@
       type="text"
       :placeholder="placeholder"
       @change="$emit('input', input)"
+      @click="input = ''; $emit('input', input);"
       @focus="showDropdown = true"
       @blur="closeDropdown"
     >

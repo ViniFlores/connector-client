@@ -52,7 +52,7 @@ export default {
 
   proxy: {
     '/api/': {
-      target: 'https://jobs.github.com/',
+      target: 'http://68.183.126.30/',
       pathRewrite: { '^/api/': '' }
     }
   },
