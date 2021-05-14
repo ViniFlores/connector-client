@@ -20,13 +20,13 @@
           </button>
         </div>
         <div class="mt-5 border-b-2 border-gray-200 pb-2">
-          <div class="overflow-scroll overflow-x-hidden bg-gray-100 rounded-md px-4 py-2 shadow" style="max-height: 600px;" v-html="description" />
+          <div class="overflow-scroll overflow-x-hidden bg-gray-100 rounded-md px-4 py-2 shadow whitespace-pre-wrap" style="max-height: 600px;" v-html="description" />
         </div>
         <div class="mt-2 border-b-2">
           <span class="px-2 py-1 rounded-md text-white bg-green-500">
             How to apply:
           </span>
-          <div class="overflow-scroll rounded-md px-4 mt-2 py-2 shadow" style="max-height: 200px;" v-html="how_to_apply" />
+          <div class="overflow-scroll rounded-md px-4 mt-2 py-2 shadow whitespace-pre-wrap" style="max-height: 200px;" v-html="how_to_apply" />
         </div>
       </div>
     </modal>

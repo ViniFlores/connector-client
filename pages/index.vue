@@ -15,7 +15,7 @@
     </div>
 
     <div class="flex flex-col mt-5" style="max-width: 80vw;">
-      <card v-for="job in jobs" :key="job.id" :logo="job.company_logo" v-bind="job" />
+      <card v-for="job in jobs" :key="job.id" class="mb-4" :logo="job.company_logo" v-bind="job" />
     </div>
   </div>
 </template>
@@ -30,6 +30,7 @@ export default {
     Autocomplete,
     Card
   },
+  title: 'Connector - Find your IT job and connect yourself',
 
   data: () => ({
     selectedDescription: null,
